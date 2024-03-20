@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Report</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <div id="bgimage">
+
+            <div id="leftpart">
+                <aside id="leftside">
+                    <div class="input">
+
+                        <input type="text" id="write" placeholder="Search">
+
+                        <button onclick="press()"><i class="fa-solid fa-magnifying-glass" id="icon"></i></button>
+
+                    </div>
+
+                    <div id="asidedown">
+                        <img src="../assets/weatherIcons/clear-day" alt="clear-day" id="updateimage">
+                    </div>
+                    <br><br>
+
+                    <p id="degree">69</p>
+
+                    <div class="flex">
+
+                        <p id="date">Saturday</p>
+
+                        <p id="timee">14:57</p>
+
+                    </div><br>
+
+                    <hr color="white">
+                    <br>
+
+                    <div class="full">
+                        <div>
+                            <i class="fa-solid fa-cloud" id="cloud"></i>
+                        </div>
+                        <div>
+                            <p id="condition">Partially Cloudy</p>
+                        </div>
+
+                    </div>
+                    <div class="full">
+                        <div>
+                            <i class="fa-solid fa-droplet" id="drop"></i>
+                        </div>
+                        <div>
+                            <p id="percentage">Perc - 0%</p>
+                        </div>
+                    </div>
+
+                    <div class="fulllocation">
+                        <div>
+                            <i class="fa-solid fa-location-dot" id="location"></i>
+                        </div>
+                        <div>
+                            <p class="down" id="citydetails">Hyderabad,Telangana, India</p>
+                        </div>
+                    </div>
+
+                </aside>
+
+
+                <aside id="rightside">
+                    <div class="toweek">
+
+                        <!-- <a href="./today.html" class="to">Today</a>
+
+                        <a href="./week.html"  id="weekreport"></a> -->
+                        <button class="to" id="todayreport">Today</button>
+                        
+                        <button id="weekreport" class="wee">Week</button>
+
+                        <li><a href="" id="cent" class="centigrate">&#8451</a></li>
+
+                        <li><a href="" id="fahren" class="farhenheat">&#8457</a></li>
+
+                    </div>
+
+                    <section id="weathercards" class="cards">
+
+                        <div>
+                            <p>00:00 AM</p>
+                            <img src="../assets/weatherIcons/partly-cloudy-day" alt="clear-night" id="imgzero">
+                            <p id="hour0">6</p>
+                        </div>
+
+                        <div>
+                            <p>01:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgone">
+                            <p id="hour1">6</p>
+                        </div>
+
+                        <div>
+                            <p>02:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwo">
+                            <p id="hour2">6</p>
+                        </div>
+
+                        <div>
+                            <p>03:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgthree">
+                            <p id="hour3">6</p>
+                        </div>
+
+                        <div>
+                            <p>04:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgfour">
+                            <p id="hour4">6</p>
+                        </div>
+
+                        <div>
+                            <p>05:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgfive">
+                            <p id="hour5">6</p>
+                        </div>
+
+                        <div>
+                            <p>06:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgsix">
+                            <p id="hour6">6</p>
+                        </div>
+
+                        <div>
+                            <p>07:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgseven">
+                            <p id="hour7">6</p>
+                        </div>
+
+                        <div>
+                            <p>08:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgeight">
+                            <p id="hour8">6</p>
+                        </div>
+
+                        <div>
+
+                            <p>09:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgnine">
+                            <p id="hour9">6</p>
+                        </div>
+
+                        <div>
+                            <p>10:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgten">
+                            <p id="hour10">6</p>
+                        </div>
+
+                        <div>
+                            <p>11:00 AM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgeleven">
+                            <p id="hour11">6</p>
+                        </div>
+
+                        <div>
+                            <p>12:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwelve">
+                            <p id="hour12">6</p>
+                        </div>
+
+                        <div>
+                            <p>13:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgthirteen">
+                            <p id="hour13">6</p>
+                        </div>
+
+                        <div>
+                            <p>14:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgfourteen">
+                            <p id="hour14">6</p>
+                        </div>
+
+                        <div>
+                            <p>15:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgfifteen">
+                            <p id="hour15">6</p>
+                        </div>
+
+                        <div>
+                            <p>16:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgsixteen">
+                            <p id="hour16">6</p>
+                        </div>
+
+                        <div>
+                            <p>17:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgseventeen">
+                            <p id="hour17">6</p>
+                        </div>
+
+                        <div>
+                            <p>18:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgeighteen">
+                            <p id="hour18">6</p>
+                        </div>
+
+                        <div>
+                            <p>19:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgnineteen">
+                            <p id="hour19">6</p>
+                        </div>
+
+                        <div>
+                            <p>20:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwenty">
+                            <p id="hour20">6</p>
+                        </div>
+
+                        <div>
+                            <p>21:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwentyone">
+                            <p id="hour21">6</p>
+                        </div>
+
+                        <div>
+                            <p>22:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwentytwo">
+                            <p id="hour22">6</p>
+                        </div>
+
+                        <div>
+                            <p>23:00 PM</p>
+                            <img src="../assets/weatherIcons/clear-night" alt="clear-night" id="imgtwentythree">
+                            <p id="hour23">6</p>
+                        </div>
+
+
+                    </section><br>
+                    <div class="cards" id="weekdivs">
+
+                    </div>
+                    <p class="para">Today's Highlights</p><br>
+                    <div id="flexcontain">
+
+                        <div>
+                            <p class="top"> UV Index </p>
+                            <p class="middle" id="uvindex">0</p>
+                            <p class="bottom" id="uvupdates">Low</p>
+                        </div>
+
+                        <div>
+                            <p class="top">Wind Satus</p>
+                            <p class="middle" id="windspeed">3.3</p>
+                            <p class="bottom" id="distance">km/h</p>
+                        </div>
+
+                        <div>
+                            <p class="top" id="sundetails">Sunrise & Sunset</p>
+                            <p class="middle" id="sunrise">06:00 am</p>
+                            <p class="bottom" id="sunset">04:45 pm</p>
+                        </div>
+
+                        <div>
+                            <p class="top">Humidity</p>
+                            <p class="middle" id="humidpercentage">91%</p>
+                            <p class="bottom" id="humidspeed">High</p>
+                        </div>
+
+                        <div>
+                            <p class="top">Visibility</p>
+                            <p class="middle" id="visiblerange">10</p>
+                            <p class="bottom" id="visibledata">Clear Air</p>
+                        </div>
+
+                        <div>
+                            <p class="top">Air Quality</p>
+                            <p class="middle" id="airspeed">13</p>
+                            <p class="bottom" id="aircondition">Good</p>
+                        </div>
+                    </div>
+                    <br>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./weather.js"></script>
+</body>
+
+</html>
