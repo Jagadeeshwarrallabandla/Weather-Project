@@ -24,12 +24,14 @@ function press(){
             return response.json()
         }).then((data) => 
         {
-            // console.log(data);
+            
+            // Getting Temperature From API
 
             document.getElementById("hour0").textContent = `${data.days[0].hours.find(clock => clock.datetime === "00:00:00").temp}ºC `;
+
+            //  Updating Images According to the Climate
             let zeroimg = document.getElementById("imgzero");
             let zeroimgvalue = data.days[0].hours.find(clock => clock.datetime === "00:00:00").icon;
-
             const zeroimgupdate = {
                 "partly-cloudy-day": "https://i.ibb.co/PZQXH8V/27.png",
                 "partly-cloudy-night": "https://i.ibb.co/Kzkk59k/15.png",
@@ -45,7 +47,6 @@ function press(){
             document.getElementById("hour1").textContent = `${data.days[0].hours.find(clock => clock.datetime === "01:00:00").temp}ºC `;
             let oneimg = document.getElementById("imgone");
             let oneimgvalue = data.days[0].hours.find(clock => clock.datetime === "01:00:00").icon;
-
             const oneimgupdate = {
                 "partly-cloudy-day": "https://i.ibb.co/PZQXH8V/27.png",
                 "partly-cloudy-night": "https://i.ibb.co/Kzkk59k/15.png",
@@ -434,7 +435,7 @@ function press(){
             };
             twentythreeimg.src = twentythreeimgupdate[twentythreeimgvalue];
 
-
+            //  Main Temperature Changing and Icon
             let imageupdate = document.getElementById("updateimage");
             let changeimage = data.days[0].icon;
 
@@ -451,12 +452,14 @@ function press(){
             imageupdate.src = imageurls[changeimage]
 
 
+            // Getting Clody Perl AND Location by searching City
+
             document.getElementById("degree").textContent = `${data.days[0].temp}ºC `;
             document.getElementById("condition").textContent = `${data.days[0].conditions}`;
             document.getElementById("percentage").textContent = `${"Perc-" + data.days[0].precip}%`;
             document.getElementById("citydetails").textContent = `${data.resolvedAddress} `;
 
-
+            // Rendering Today Highlights Dta
 
             let uvdata = document.getElementById("uvindex");
             let uvstore = data.days[0].uvindex;
@@ -716,10 +719,10 @@ function press(){
                             
                             
                             
-    }).catch()
-    {
-        // alert(`City Not Found`)
-    }
+    }).catch((err) =>{
+        alert(`City Not Found`)
+    });
+
         
         }
 
